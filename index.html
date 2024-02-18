@@ -6,10 +6,14 @@
     <!-- Daisy ui and tailwind css link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google font link -->
+    <!-- rale Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Inter google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <title>P-Ticket</title>
        <!-- customize tailwind css -->
@@ -22,7 +26,9 @@
               },
               fontFamily: {
                 'Rale':[ 'Raleway', 'sans-serif'],
+                'Inter':[ 'Inter', 'sans-serif']
               }
+             
             }
           }
         }
@@ -76,6 +82,51 @@
         </section>
     </header>
     <article>
+    <!-- ===================================================================================================
+        Best offers part start
+    =================================================================================================== -->
+    <section class="container mx-auto mb-40 font-Inter">
+        <h1 class="text-center text-4xl font-bold mb-12">Best offers for you</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-2 lg:gap-x-6">
+            <!-- Coupon1 -->
+           <section class="flex bg-[#FFBF0F] lg:gap-x-3 rounded-lg">
+            <!-- left part -->
+             <div class="flex  flex-col p-3 lg:p-12 ">
+                <h2 class="text-lg lg:text-4xl font-bold">15% OFF</h2>
+                <p class="text-sm lg:text-xl font-semibold">on your next purchase</p>
+                <p class="text-xs lg:text-lg font-medium">use by January 2024</p>
+             </div>
+             <!-- Right part -->
+             <div class="font-Rale flex  flex-col p-3 pl-11 lg:p-12 border-l-2 border-dashed border-white">
+                <h2 class="text-lg lg:text-2xl font-bold">NEW15</h2>
+                <p class="text-sm lg:text-xl font-medium">Coupon Code</p>
+             </div>
+
+           </section>
+
+           <!-- Coupon-2 -->
+           <section class="flex bg-[#F78C9C] lg:gap-x-3 rounded-lg">
+            <!-- left part -->
+             <div class="flex  flex-col p-3 lg:p-12 ">
+                <h2 class="text-lg lg:text-4xl font-bold">20% OFF</h2>
+                <p class="text-sm lg:text-xl font-semibold">on your next purchase</p>
+                <p class="text-xs lg:text-lg font-medium">use by January 2024</p>
+             </div>
+             <!-- Right part -->
+             <div class="font-Rale flex pl-11 flex-col p-3 lg:p-12 border-l-2 border-dashed border-white">
+                <h2 class="text-lg lg:text-2xl font-bold">Couple 20</h2>
+                <p class="text-sm lg:text-xl font-medium">Coupon Code</p>
+             </div>
+           </section>
+
+
+            
+
+        </div>
+    </section>
+    <!-- ===================================================================================================
+        Best offers End
+    =================================================================================================== -->
         
     </article>
     <footer>
