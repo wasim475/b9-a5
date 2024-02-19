@@ -15,11 +15,9 @@ document.getElementById('buyTicketBtn').addEventListener('click',function(){
 ==============================================================*/
 
 
-// function getSeatName(seatNameId){
-//     let seatName = document.getElementById(seatNameId);
-//     let seat = seatName.innerHTML;
-//     return seat;
-// }
+/*=======================================================================================
+            #Seat part start
+=========================================================================================*/ 
 
 let seatList = document.getElementsByClassName('sBtn')
 let selectedSeatNumber = document.getElementById('selectedSeatNumber')
@@ -31,7 +29,6 @@ let remainingSeatCounter = 0;
 let seatPriceCounter =0;
 let seatCounter = 0
 
-let seatListNames = []
 
 for (let seatL of seatList){
     seatL.addEventListener('click',function(){
@@ -52,7 +49,6 @@ for (let seatL of seatList){
             liForSeatPrice.innerText = 550;
              li.innerHTML = seatL.innerHTML
 
-            seatListNames.push(seatL.innerHTML)
             seatNameList.appendChild(li)
             seatClassName.appendChild(liForSeatClass)
             seatPrice.appendChild(liForSeatPrice)
@@ -72,9 +68,13 @@ for (let seatL of seatList){
     })
 }
 
-    
+/*=======================================================================================
+            #Seat part end
+=========================================================================================*/ 
 
-// Coupon start
+/*=======================================================================================
+            #Coupon part start
+=========================================================================================*/ 
 
 
 
@@ -125,9 +125,12 @@ couponBtn.addEventListener('click',function(){
         TotalDiscount.innerText = discount
     }
     else{
-        error1.innerText = 'Invalid or expired coupon Code!'
+        error1.innerText = 'Invalid or expired coupon code!'
     }
 })
+/*=======================================================================================
+            #Coupon part End
+=========================================================================================*/ 
 
 /*=======================================================================================
             #Next btn start
