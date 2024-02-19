@@ -63,6 +63,8 @@ for (let seatL of seatList){
                 nextButton.removeAttribute('disabled')
             }
             
+        }else{
+            alert('You can select maximum 4 seats.')
         }
        
     })
