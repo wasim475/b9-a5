@@ -58,6 +58,12 @@ for (let seatL of seatList){
             seatPrice.appendChild(liForSeatPrice)
             selectedSeatNumber.innerText = seatCounter;
             seatL.style.background = '#1DD100'
+            seatL.style.color = 'white'
+            seatL.setAttribute('disabled', true)
+
+            if(seatCounter===4){
+                couponBtn.removeAttribute('disabled')
+            }
             
         }
        
@@ -75,6 +81,8 @@ for (let seatL of seatList){
 let fifteenParcentCouponCode = document.getElementById('fifteenParcentCouponCode')
 let twentyParcentCouponCode = document.getElementById('twentyParcentCouponCode')
 let couponInput = document.getElementById('couponInput')
+let TotalDiscount = document.getElementById('TotalDiscount')
+let CouponPortion = document.getElementById('CouponPortion')
 
 
 let discount = 0;
@@ -88,20 +96,20 @@ couponInput.addEventListener('keyup',function(e){
     }
     else if(e.target.value === twentyParcentCouponCode.innerText){
         couponBtn.removeAttribute('disabled')
-    }else{
-        couponBtn.setAttribute('disabled', true)
     }
 })
 
-
+const error1 = document.getElementById('error1')
 couponBtn.addEventListener('click',function(){
     if(couponInput.value ===fifteenParcentCouponCode.innerText){
         let totalTicketsPrice = parseInt(totalSeatPrice.innerText)
         let newDiscount1 = (totalTicketsPrice*15)/100;
         discount = newDiscount1;
         grandTotal.innerText = totalTicketsPrice -discount;
-        couponInput.style.display= 'none'
-        couponBtn.style.display= 'none'
+        CouponPortion.style.display= 'none'
+        discountPortion.style.display= 'flex'
+        error1.style.display= 'none'
+        TotalDiscount.innerText = discount
         
     }
     else if(couponInput.value === twentyParcentCouponCode.innerText ){
@@ -109,10 +117,12 @@ couponBtn.addEventListener('click',function(){
         let newDiscount2 = (totalTicketsPrice*20)/100;
         discount = newDiscount2;
         grandTotal.innerText = totalTicketsPrice -discount;
-        couponInput.style.display= 'none'
-        couponBtn.style.display= 'none'
+        CouponPortion.style.display= 'none'
+        discountPortion.style.display= 'flex'
+        error1.style.display= 'none'
+        TotalDiscount.innerText = discount
     }
     else{
-        grandTotal.innerText = totalTicketsPrice;
+        error1.innerText = 'Invalid or expired coupon Code!'
     }
 })
