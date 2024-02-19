@@ -63,6 +63,8 @@ for (let seatL of seatList){
 
             if(seatCounter===4){
                 couponBtn.removeAttribute('disabled')
+            }else if(seatCounter>0 && (numberInput.value) ){
+                nextButton.removeAttribute('disabled')
             }
             
         }
@@ -126,3 +128,20 @@ couponBtn.addEventListener('click',function(){
         error1.innerText = 'Invalid or expired coupon Code!'
     }
 })
+
+/*=======================================================================================
+            #Next btn start
+=========================================================================================*/ 
+const nextButton = document.getElementById('nextButton')
+const numberInput = document.getElementById('numberInput')
+
+numberInput.addEventListener('keyup',function(e){
+    if(seatCounter>0 && typeof parseInt(e.target.value) === 'number' ){
+        nextButton.removeAttribute('disabled')
+    }
+})
+
+
+/*=======================================================================================
+            #Next btn End
+=========================================================================================*/ 

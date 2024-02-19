@@ -305,7 +305,7 @@
                         <h2 class="mb-2">Select Your Seat</h2>
                        <div class="flex justify-between bg-[#F7F8F8] border-t-2 border-b-2 border-dashed p-3 rounded-t-lg">
                         <div class="">
-                            <h2 class="font-medium">Seat <span id="selectedSeatNumber" class="bg-primaryC px-1 rounded-t-lg text-white">0</span></h2>
+                            <h2 class="font-medium">Seat <span id="selectedSeatNumber" class="bg-primaryC px-1 rounded-md text-white">0</span></h2>
                             <ul id="seatName">
                                 <li></li>
                             </ul>
@@ -359,7 +359,7 @@
                             <div class="label">
                             <span class="label-text font-semibold">Phone Number*</span>
                             </div>
-                            <input type="number" required placeholder="Enter your phone number" class="input input-bordered w-full" />
+                            <input id="numberInput" type="number" placeholder="Enter your phone number" class="input input-bordered w-full" />
                         </label>
 
                         <label class="form-control w-full">
@@ -369,7 +369,7 @@
                             <input type="email" placeholder="Enter your email id" class="input mb-3 input-bordered w-full" />
                         </label>
                         <!-- Modal start -->
-                        <button class="btn w-full bg-primaryC text-white"  onclick="my_modal_1.showModal()">Next</button>
+                        <button id="nextButton" class="btn w-full bg-primaryC text-white" disabled  onclick="my_modal_1.showModal()">Next</button>
                             <dialog id="my_modal_1" class="modal">
                             <div class="modal-box flex flex-col justify-center items-center">
                                 <img class="w-24 mb-2 lg:mb-8" src="./images/success.png" alt="">
