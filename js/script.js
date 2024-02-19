@@ -94,14 +94,7 @@ let discount = 0;
 let couponBtn = document.getElementById('couponBtn')
 
 
-couponInput.addEventListener('keyup',function(e){
-    if(e.target.value === fifteenParcentCouponCode.innerText){
-        couponBtn.removeAttribute('disabled')
-    }
-    else if(e.target.value === twentyParcentCouponCode.innerText){
-        couponBtn.removeAttribute('disabled')
-    }
-})
+
 
 const error1 = document.getElementById('error1')
 couponBtn.addEventListener('click',function(){
